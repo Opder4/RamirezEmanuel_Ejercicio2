@@ -24,9 +24,19 @@ Console.WriteLine("");
 string autorizacion = Console.ReadLine();
 Console.WriteLine("");
 Console.WriteLine("Trae una USB? (s/n)");
+Console.WriteLine("");
 string usb=Console.ReadLine();
-if (usb==s)
+Console.WriteLine("");
+Console.WriteLine("Está acompañado? (s/n)");
+Console.WriteLine("");
+string compania = Console.ReadLine();
+Console.WriteLine("");
+if (hora>=0 && hora<=23 && dia>=1 && dia <=7 && (carne=="s" || carne=="n") && (autorizacion=="s" || autorizacion=="n") && (usb=="s" || usb=="n") && (compania=="s" || compania == "n"))
 {
-    Console.WriteLine("Está acompañado? (s/n)");
-    string compania=Console.ReadLine();
+   
+}
+else
+{
+    Console.WriteLine("Datos inválidos");
+    Console.WriteLine("Por favor ingrese datos que sean válidos");
 }
