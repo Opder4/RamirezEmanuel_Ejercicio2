@@ -140,3 +140,4 @@ else
     Console.WriteLine("Datos inválidos");
     Console.WriteLine("Por favor ingrese datos que sean válidos");
 }
+Console.WriteLine("");
