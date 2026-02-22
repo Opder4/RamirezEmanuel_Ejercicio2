@@ -36,16 +36,99 @@ if (hora>=0 && hora<=23 && dia>=1 && dia <=7 && (carne=="s" || carne=="n") && (a
    switch (rol)
     {
         case 1:
-            Console.WriteLine("");
-            break;
+            if (dia>=1 && dia<=5 && hora>=7 && hora<=18 && carne=="s")
+            {
+                if (usb=="s" && compania=="s")
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Medio");
+                }
+                else if (usb=="s" && compania=="n")
+                {
+                    Console.WriteLine("Acceso: Denegado");
+                    Console.WriteLine("Permiso: Nulo");
+                }
+                else
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Medio");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Acceso: Denegado");
+                Console.WriteLine("Permiso: Nulo");
+            }
+                break;
             case 2:
-            Console.WriteLine("");
+            if (hora >= 6 && hora <= 22)
+            {
+                if (usb == "s" && compania == "s")
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Medio-Alto");
+                }
+                else if (usb == "s" && compania == "n")
+                {
+                    Console.WriteLine("Acceso: Denegado");
+                    Console.WriteLine("Permiso: Nulo");
+                }
+                else
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Medio-Alto");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Acceso: Denegado");
+                Console.WriteLine("Permiso: Nulo");
+            }
             break;
             case 3:
-            Console.WriteLine("");
+            if (autorizacion=="s")
+            {
+                if (usb == "s" && compania == "s")
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Alto");
+                }
+                else if (usb == "s" && compania == "n")
+                {
+                    Console.WriteLine("Acceso: Denegado");
+                    Console.WriteLine("Permiso: Nulo");
+                }
+                else
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Alto");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Acceso: Denegado");
+                Console.WriteLine("Permiso: Nulo");
+            }
             break;
             case 4:
-            Console.WriteLine("");
+            if (autorizacion == "s" && compania == "s" && hora>=8 && hora<=14 && (dia==2 || dia==5))
+            {
+                if (usb == "s")
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Bajo");
+                }
+                else if (usb=="n")
+                {
+                    Console.WriteLine("Acceso: Permitido");
+                    Console.WriteLine("Permiso: Nivel Bajo");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Acceso: Denegado");
+                Console.WriteLine("Permiso: Nulo");
+            }
             break;
         default:
             Console.WriteLine("Rol no válido");
